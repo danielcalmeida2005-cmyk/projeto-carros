@@ -5,7 +5,9 @@ padding: 0px;
 font-family: Arial, Helvetica, sans-serif;
 text-decoration: none;}
 
-body {background-color:#F29727 }
+body {background-color:#F29727;
+height: 100%;
+width: 100%;}
 
 header {background:url(imagens/baixados\ \(3\)\ -\ Editado.jpg);
   width: 100%;
@@ -28,7 +30,8 @@ display: flex;
   .menu {position: absolute;
   top: 50%;
 left: 50%;
-transform: translate(50%,-130%);
+transform: translate(10%,-130%);
+
 
 }
 
@@ -40,11 +43,11 @@ transform: translate(50%,-130%);
   background-color:#F29727 ;
   padding: 5px;
   border-radius: 15px;
- flex-wrap: wrap;
+
 
 }
 
-.menu a:hover{box-shadow: 0px 0px 10px #F26513; 
+.menu a:hover{box-shadow: 0px 0px 10px #000000; 
   transform: translateY(-5px);
 }
 
@@ -60,19 +63,57 @@ transform: translate(50%,-130%);
 }
 
 .opcoes article {
-  background-color: white;
+  
   padding: 15px;
-  border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(229, 255, 0, 0.2);
-  height: 120px;
+  height: 170px;
   width: 200px;
   text-align: center;
+   overflow: hidden;
+   background-color: rgba(255, 255, 255, 0.15); /* leve transparência */
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+
+
+.opcoes  a {
+ color: white;
+  padding: 5px 0;
+  text-align: center;
+  width: calc(100% + 20px); /* cobre possíveis paddings do container */
+  display: block;
+  position: relative;
+  left: -10px;              /* ajusta lateral se necessário */
+}
+
+
+.opcoes img {
+  width: 100%;          
+  height: auto;        /* mantém proporção da imagem */
+  max-height: 120px;   /* define limite de altura */
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;      /* evita espaços laterais inesperados */
+  margin: 10px auto 0 auto; /* 10px de espaço acima, centraliza horizontalmente */
+}
+
+.opcoes article {
+  transition: transform 0.3s ease; /* faz a transição suave */
+}
+
+.opcoes article:hover {
+  transform: scale(1.2); /* aumenta a imagem em 20% */
 }
 
 
 .sub h2 {text-align: center;
 font-size: 30px;
-margin-top: 5px;}
+margin-top: 5px;
+margin-bottom: 10px;
+padding: 10px;}
 
 
 .meio{ display: flex;
@@ -80,12 +121,14 @@ margin-top: 5px;}
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
- margin: 20px;
+ margin: 0px ;
+ background-color:#F2B33D;
+ padding: 20px;
  }
 .meio article {
   background-color: antiquewhite;
-  height: 120px;
-  width: 200px;
+  height: 280px;
+  width: 300px;
   display: flex;           /* ativa flexbox dentro do article */
   flex-direction: column;  /* coloca os elementos em coluna */
   justify-content: center;  /* centraliza verticalmente */
@@ -93,10 +136,24 @@ margin-top: 5px;}
   text-align: center;    /* garante que texto fique centralizado */
   border-radius: 10px;
 }
+.meio img { width: 100%;          
+        /* mantém proporção da imagem */
+  max-height: 220px;   /* define limite de altura */
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;      /* evita espaços laterais inesperados */
+  margin: 10px auto 0 auto; }
 
+  .meio h3  { margin: 5px;
+text-align: center;
+color: black;}
+ 
 
-.meio h3 a {margin: 5px;
-text-align: center;}
+.meio a {
+  margin: 5px;
+text-align: center;
+color: black;
+}
 
 
 footer {background-color: black;
@@ -113,8 +170,7 @@ padding: 5px;}
   margin: 5px;
 font-size: 20px;}
 
-.aviso strong {
-
+.aviso strong {    
   display: block;       /* transforma em bloco */
   width: 100%;          /* ocupa toda a largura da seção */
   text-align: center;   /* centraliza o texto */
@@ -123,12 +179,8 @@ font-size: 20px;}
  
 }
 
-
-
-
-
-
-
+.linha {border: solid 1px white;
+margin-bottom: 20px;}
 
 
 
