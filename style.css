@@ -149,7 +149,8 @@ header nav.menu a {
   object-fit: cover;
   border-radius: 10px;
   display: block;     
-  margin: 10px auto 0 auto;
+ margin: auto;
+  
 }
 
 .opcoes article {
