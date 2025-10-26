@@ -6,16 +6,70 @@
     <title>projeto carros</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #F29727;
+      color: white;
+      height: 100vh;
+    }
+
+    /* Tela do aviso */
+    #aviso {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      z-index: 9999;
+      cursor: pointer;
+      transition: opacity 0.5s ease;
+    }
+
+    #aviso h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #ff0000;
+    }
+
+    #aviso p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+  </style>
 </head>
 <body>
-    <header>
-<h1>Rocks car</h1>
 
-<nav class="menu">
+  <div id="aviso">
+    <H2>ANTEÇÃO</H2>
+    <P>Site em Desenvolvimento.</P>
+    <p>Clique em qualquer lugar para continuar.</p>
+  </div>
+
+ <header>
+
+   <h1>Rocks car</h1>
+  <nav class="menu">
     <a href="">Fabricantes</a>
     <a href="">Objetivo</a>
     <a href="">Outros</a>
-</nav>
+  </nav>
+
+
     </header>
 
      <main>
@@ -134,3 +188,16 @@
 </footer>
 </body>
 </html>
+
+  <script>
+    const aviso = document.getElementById('aviso');
+    const conteudo = document.getElementById('conteudo');
+
+    aviso.addEventListener('click', () => {
+      aviso.style.opacity = '0';
+      setTimeout(() => {
+        aviso.style.display = 'none';
+        conteudo.style.display = 'block';
+      }, 500); // tempo da transição
+    });
+  </script>
