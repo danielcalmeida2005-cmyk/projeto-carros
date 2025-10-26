@@ -9,18 +9,20 @@ text-decoration: none;}
 body {background-color:#F29727;
 height: 100%;
 width: 100%;}
+
 header {
   position: relative;
   width: 100%;
   height: 500px;
   background: url(imagens/baixados\ \(3\)\ -\ Editado.jpg) center/cover no-repeat;
+
 }
 
 
 header::before {
   content: "";
   position: absolute;
-  top: 50%;           /* centraliza verticalmente */
+  top: 50%;           
   left: 0;
   width: 100%;
   height: 100px;   
@@ -30,6 +32,30 @@ header::before {
   flex-wrap: wrap;
   
 }
+
+
+/* fita que ocupa toda a largura */
+.fita {
+  width: 100%;                        /* ocupa de ponta a ponta */
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem 0;                     /* só padding vertical */
+  text-align: center;                  /* centraliza o h1 */
+  box-sizing: border-box;
+}
+
+/* h1 dentro da fita */
+.fita h1 {
+  font-size: clamp(40px, 8vw, 90px);
+  color: white;
+  font-family: "Rubik Glitch", system-ui;
+  text-shadow: 2px 2px 8px black;
+  margin: 0;
+  line-height: 1.1;
+  word-break: break-word;
+}
+
+
+
 
 header h1 {
   position: absolute;
@@ -41,7 +67,7 @@ header h1 {
   color: white;
   text-shadow: 2px 2px 8px black;
   margin: 0;
-  z-index: 2;          /* acima da fita */
+  z-index: 2;/* acima da fita */
 
 }
 
@@ -59,7 +85,7 @@ header nav.menu {
   transform: translateX(-50%);
   display: flex;
   gap: 30px;
-  z-index: 2;          /* acima da fita */
+  z-index: 2;         
 }
 
 header nav.menu a {
@@ -121,7 +147,7 @@ header nav.menu a {
   height: auto;        
   max-height: 120px;  
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 10px;
   display: block;     
   margin: 10px auto 0 auto;
 }
